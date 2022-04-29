@@ -101,13 +101,12 @@ function FormikUpdate() {
               <FieldArray
                 name="ingredients"
                 render={(arrayHelpers) => (
-                  <div>
+                  <div>1
                     {values.ingredients && values.ingredients.length > 0 ? (
                       values.ingredients.map((item, index) => (
                         <div key={index}>
                           <Field
                             variant="outlined"
-                            fullWidth
                             label="Name"
                             name={`ingredients.${index}`}
                             id={`ingredients.${index}`}

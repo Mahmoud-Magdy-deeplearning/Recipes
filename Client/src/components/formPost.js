@@ -19,7 +19,6 @@ function FormikPost() {
           file: null,
         }}
         onSubmit={async (values) => {
-          
           if (
             !values["title"] ||
             !values["recipe"] ||
@@ -41,7 +40,9 @@ function FormikPost() {
             formData.append("file", values["file"]);
             formData.append("title", values["title"]);
             formData.append("recipe", values["recipe"]);
-            formData.append("ingredients", values["ingredients"]);
+            for (let i = 0; i < values["ingredients"].length; i++) {
+              formData.append("ingredients", values["ingredients"][i]);
+            }
             const response = await postData(
               process.env.REACT_APP_API_URL,
               formData
@@ -95,7 +96,6 @@ function FormikPost() {
                         <div key={index}>
                           <Field
                             variant="outlined"
-                            fullWidth
                             label="Name"
                             name={`ingredients.${index}`}
                             id={`ingredients.${index}`}
