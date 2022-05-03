@@ -1,7 +1,7 @@
 ![alt text](https://www.askgalore.com/wp-content/uploads/2021/11/mern_hero.png)
 
 ## Recipes website
-A website where you can add, update, delete and view recipes, you can access it from here [here](https://recipes-mahmoud.herokuapp.com/)
+A website where you can add, update, delete and view recipes, you can access it from [here](https://recipes-mahmoud.herokuapp.com/)
 
 ## Prerequisites
 - [MongoDB](https://www.mongodb.com/)
